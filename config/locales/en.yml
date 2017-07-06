@@ -1,0 +1,6 @@
+en:
+  email_subjects: 'Emails subjects'
+  issue_add_subject: 'Subject for new issue'
+  issue_edit_subject: 'Subject for when an issue is changed' 
+  settings_replace_fields_text: 'In the subject fields, the following variables gets substituted:'
+

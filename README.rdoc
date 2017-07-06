@@ -1,0 +1,6 @@
+= email_fiddler
+
+A Redmine plugin to enable fliddling with the notification emails subjects
+
+The main goal for this plugin is to enable GMail's email grouping to better 
+function with Redmine notification emails.

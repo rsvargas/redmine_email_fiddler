@@ -1,0 +1,6 @@
+pt-BR:
+  email_subjects: 'Assuntos dos emails'
+  issue_add_subject: 'Assunto para nova tarefa'
+  issue_edit_subject: 'Assunto para quando a tarefa for editada' 
+  settings_replace_fields_text: 'Nos campos de assunto, as seguintes variáveis são substituídas:'
+

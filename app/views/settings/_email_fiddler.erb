@@ -1,0 +1,24 @@
+<%= field_set_tag do %>
+<u><b><%= l(:email_subjects) %></b></u>
+<br/>
+<br/>
+<%= l(:settings_replace_fields_text) %>
+<ul>
+    <li><code>{project}</code> : <%= l(:label_project) %></li> 
+    <li><code>{tracker}</code> : <%= l(:label_tracker) %></li> 
+    <li><code>{issue_id}</code> : <%= l(:field_identifier) %></li> 
+    <li><code>{subject}</code> : <%= l(:field_subject) %></li> 
+    <li><code>{status}</code> : <%= l(:label_issue_status) %></li> 
+</ul>
+<br/>
+<p>
+<%= label_tag 'settings[issue_add_subject]', l(:issue_add_subject) %>
+<%= text_field_tag('settings[issue_add_subject]', @settings['issue_add_subject'], 
+                    size: 75, placeholder: l(:label_no_change_option)  ) %>
+</p>
+<p>
+<%= label_tag 'settings[issue_edit_subject]', l(:issue_edit_subject) %>
+<%= text_field_tag('settings[issue_edit_subject]', @settings['issue_edit_subject'], 
+                    size: 75, placeholder: l(:label_no_change_option)  ) %>
+</p>
+<% end %>
