@@ -35,7 +35,8 @@ module EmailFiddlerMailerPatch
             mail = issue_add_without_fiddle(*args)
             new_subject_fmt = Setting.plugin_email_fiddler['issue_add_subject']
             if new_subject_fmt != ''
-                issue = args[0]
+                issue = args.length == 1 ? args[0] : args[1]
+                #issue = args[1]
                 new_subject = mail_fiddler_format(new_subject_fmt, issue )
                 #Rails.logger.info "old_subject = #{mail.subject}\nnew_subject = #{new_subject}"
                 mail.subject = new_subject
@@ -48,7 +49,8 @@ module EmailFiddlerMailerPatch
             mail = issue_edit_without_fiddle(*args)
             new_subject_fmt = Setting.plugin_email_fiddler['issue_edit_subject']
             if new_subject_fmt != ''
-                journal = args[0]
+                journal = args.length == 1 ? args[0] : args[1]
+                #journal = args[1]
                 issue = journal.journalized
 
                 new_subject = mail_fiddler_format(new_subject_fmt, issue )
