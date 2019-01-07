@@ -3,8 +3,13 @@ module EmailFiddlerMailerPatch
         base.send(:include, InstanceMethods)
 
         base.class_eval do
-            alias_method_chain :issue_add, :fiddle
-            alias_method_chain :issue_edit, :fiddle
+	    alias_method :issue_add_without_fiddle, :issue_add
+	    alias_method :issue_add, :issue_add_with_fiddle
+	    #alias_method_chain :issue_add, :fiddle 
+
+	    alias_method :issue_edit_without_fiddle, :issue_edit
+	    alias_method :issue_edit, :issue_edit_with_fiddle
+            #alias_method_chain :issue_edit, :fiddle
         end
     end
 
